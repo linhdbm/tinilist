@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
 <variant-01  headerType="{{headerType}}" status="{{status}}"/>
 
-=======
->>>>>>> Stashed changes
 <sticky-bottom />
