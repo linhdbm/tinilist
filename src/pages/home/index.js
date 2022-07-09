@@ -3,21 +3,12 @@ import { getData } from '../../services';
 Page({
   data: {
     status: 'LOADING',
-    headerType: 'DEFAULT',
-    campaigns: [1, 2, 3, 4],
-    banners: [1, 2, 3],
+    headerType: 'DEFAULT'
   },
   async loadData() {
     try {
-      const [banners, campaigns] = await Promise.all([
-        getData('banners'),
-        getData('campaigns'),
-      ]);
-
       this.setData({
         ...this.data,
-        banners,
-        campaigns,
         status: 'SUCCESS',
       });
     } catch (err) {

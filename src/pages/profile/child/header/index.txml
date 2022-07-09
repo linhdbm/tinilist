@@ -11,7 +11,7 @@
           <image src="/assets/avatar.png" />
         </view>
       </view>
-      <view class="font-bold text-large mt-2x-small">User name</view>
+      <view class="font-bold text-large mt-2x-small">Tên người dùng</view>
     </view>
   </view>
   <view class="top">
@@ -20,7 +20,7 @@
 
 <template name="SCROLLED">
   <view class="header header-scrolled flex items-center p-medium">
-    <view class="font-bold text-large">User name</view>
+    <view class="font-bold text-large">Thông tin người dùng</view>
   </view>
   <view class="top-scrolled">
   </view>

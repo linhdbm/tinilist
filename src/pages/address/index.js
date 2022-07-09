@@ -15,7 +15,7 @@ $page({
     status: c.LOADING,
   },
   async onLoad(query) {
-    my.setNavigationBar({ title: 'Deliver to' });
+    my.setNavigationBar({ title: 'Giao hàng đến' });
     if (this.data.buyer.status === c.LOADING) {
       await this.getBuyerInfo();
     }

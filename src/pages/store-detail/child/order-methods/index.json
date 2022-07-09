@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "componentLifeCycleV2": "YES",
-  "usingComponents": {
-    "order-method": "components/order-method",
-    "button": "@tiki.vn/tini-ui/es/tu-button/index"
-  }
-}

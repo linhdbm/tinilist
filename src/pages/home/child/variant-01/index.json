@@ -3,8 +3,6 @@
   "componentLifeCycleV2": "YES",
   "usingComponents": {
     "header": "pages/home/child/header",
-    "banner": "pages/home/child/banner",
-    "order-methods": "components/order-methods",
-    "campaigns-list": "pages/home/child/campaigns-list"
+    "order-methods": "components/order-methods"
   }
 }

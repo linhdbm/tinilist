@@ -27,10 +27,10 @@
       />
       <view>
         <view>
-          Support
+          CSKH
         </view>
         <view class="text-small text-gray60">
-          Call or chat with us
+          Liên hệ với chúng tôi
         </view>
       </view>
     </view>
@@ -42,10 +42,10 @@
   </view>
   <view class="footer text-center py-medium">
     <view class="text-small text-brand">
-      Terms and Conditions
+      Điều khoản và điều kiện
     </view>
     <view class="text-x-small mt-medium text-gray60">
-      version: 1.0.0
+      Phiên bản: 1.0.0
     </view>
   </view>
 </view>

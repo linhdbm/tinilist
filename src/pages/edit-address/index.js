@@ -54,7 +54,7 @@ $page({
   },
   onLoad(query) {
     my.setNavigationBar({
-      title: 'Edit address',
+      title: 'Chỉnh sửa địa chỉ',
     });
     my.addIconsToNavigationBar({
       icons: [
@@ -124,9 +124,9 @@ $page({
         data: createDataForAddressBook(this.data.addressInfo),
         success: (success) => {},
         fail: ({ errorMessage: err }) => {
-          const content = 'Message: ' + err;
+          const content = 'Thông báo: ' + err;
           my.alert({
-            title: 'Fail to save to address book.',
+            title: 'Không thể lưu vào sổ địa chỉ.',
             content,
             buttonText: 'OK',
           });

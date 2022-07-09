@@ -22,8 +22,8 @@
   <view class="new-address-page px-medium pt-medium border-box">
     <view class="p-medium mb-medium bg-white radius-8px">
       <address onChangeAddress="onAddressChange"
-               cityLabel="City"
-               wardLabel="Ward"
+               cityLabel="Thành phố"
+               wardLabel="Phường"
                showName="{{true}}"
                showPhone="{{true}}"
                street="{{addressInfo.address.street}}"
@@ -32,16 +32,16 @@
                ward="{{addressInfo.address.ward}}"
                full_name="{{addressInfo.name}}"
                phone_number="{{addressInfo.phone}}"
-               streetLabel="Address"
-               districtLabel="District"
-               nameLabel="Recipient’s name"
-               phoneLabel="Recipient’s phone"
-               cityPlaceholder="Select city"
-               wardPlaceholder="Select ward"
-               namePlaceholder="E.g Nguyen Van A"
-               districtPlaceholder="Select district"
-               phonePlaceholder="10-digit phone number"
-               streetPlaceholder="Lot number, street name"
+               streetLabel="Địa chỉ"
+               districtLabel="Quận/Huyện"
+               nameLabel="Tên người nhận"
+               phoneLabel="Số điện thoại người nhận"
+               cityPlaceholder="Chọn thành phố"
+               wardPlaceholder="Chọn phường"
+               namePlaceholder="Ví dụ Nguyen Van A"
+               districtPlaceholder="Chọn quận/huyện"
+               phonePlaceholder="Số điện thoại"
+               streetPlaceholder="Số và tên đường"
                cityErrorMsg="{{errMsg.city}}"
                districtErrorMsg="{{errMsg.district}}"
                wardErrorMsg="{{errMsg.ward}}"
@@ -51,7 +51,7 @@
       <view class="flex items-center"
             onTap="onToggleCheckBox">
         <c-checkbox checked="{{willSaveToAddressBook}}" />
-        <view class="ml-x-small">Save to Tiki’s address book</view>
+        <view class="ml-x-small">Lưu vào sổ địa chỉ của Tiki</view>
       </view>
     </view>
     <view class="save-btn px-medium bg-white py-2x-small">
@@ -68,9 +68,9 @@
   </view>
   <c-modal isShow="{{isShowModal}}"
            headerContent="Confirmation"
-           description="Do you want to remove this address?"
-           leftButton="Yes"
-           rightButton="No"
+           description="Bạn có muốn xóa địa chỉ này không?"
+           leftButton="Có"
+           rightButton="Không"
            onRightButtonClick="onCloseModal"
            onLeftButtonClick="onConfirmDelete" />
 </template>

@@ -21,7 +21,7 @@ $page({
     status: c.LOADING,
   },
   async onLoad(query) {
-    my.setNavigationBar({ title: 'Search' });
+    my.setNavigationBar({ title: 'Tìm kiếm hàng' });
     const orderMethod = queryToObj(query).method;
 
     if (this.data.list.status === c.LOADING) {

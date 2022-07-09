@@ -2,29 +2,29 @@ export function validate(a) {
   let msg = {};
   let isValid = true;
   if (!a.name.length || a.name.length > 50) {
-    msg.name = 'Please enter a valid name';
+    msg.name = 'Vui lòng nhập tên hợp lệ';
   }
   if (containsSpecialChars(a.name)) {
     msg.name =
-      'The content contains invalid characters (numbers, special characters...), please re-enter';
+      'Nội dung chứa các ký tự không hợp lệ (số, ký tự đặc biệt ...), vui lòng nhập lại';
   }
   if (a.phone.trim().length !== 10) {
-    msg.phone = 'Please enter a 10 digit phone number';
+    msg.phone = 'Vui lòng nhập một số điện thoại gồm 10 chữ số';
   }
   if (!a.address.city) {
-    msg.city = 'Please select your city';
+    msg.city = 'Vui lòng chọn thành phố của bạn';
   }
   if (!a.address.district) {
-    msg.district = 'Please select your district';
+    msg.district = 'Vui lòng chọn quận/huyện của bạn';
   }
   if (!a.address.ward) {
-    msg.ward = 'Please select your ward';
+    msg.ward = 'Vui lòng chọn phường của bạn';
   }
   if (a.address.street.split(' ').length < 2) {
-    msg.street = 'The address must contain at least 2 words';
+    msg.street = 'Địa chỉ phải chứa ít nhất 2 từ';
   }
   if (!a.address.street) {
-    msg.street = 'Please enter street name';
+    msg.street = 'Vui lòng nhập tên đường';
   }
   if (Object.keys(msg).length) {
     isValid = false;

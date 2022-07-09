@@ -31,7 +31,7 @@ $page({
     holderStatus: "none",
   },
   async onLoad(query) {
-    let title = "Store pickup";
+    let title;
     const orderMethod = queryToObj(query).method;
 
     if (orderMethod === c.DELIVERY) title = "Delivery";

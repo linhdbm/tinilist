@@ -3,23 +3,15 @@ import { delay, clone } from '../helper';
 import { buyer } from './data/buyer';
 import { orders } from './data/orders';
 import { stores } from './data/stores';
-import { coupons } from './data/coupons';
-import { banners } from './data/banners';
 import { products } from './data/products';
-import { campaigns } from './data/campaigns';
 import { categories } from './data/categories';
-import { reservations } from './data/reservations';
 
 const data = {
   buyer,
   orders,
   stores,
-  coupons,
-  banners,
   products,
-  campaigns,
-  categories,
-  reservations,
+  categories
 };
 
 export const getData = async (name) => {

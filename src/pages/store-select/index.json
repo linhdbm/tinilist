@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "c-icon": "components/c-icon",
-    "stores-list": "components/stores-list",
-    "textfield": "@tiki.vn/tini-ui/es/textfield/index"
-  }
-}

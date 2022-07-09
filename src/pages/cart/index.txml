@@ -28,15 +28,15 @@
   <view class="cart-page px-medium pt-medium">
     <view class="text-medium font-bold mb-2x-small"
           onTap="">
-      {{cart.orderMethod === 'DELIVERY' ? 'Shipping details' :'Pickup details'}}
+      {{cart.orderMethod === 'DELIVERY' ? 'Thông tin đơn hàng' :'Thông tin nhận hàng'}}
     </view>
     <view class="p-medium radius-8px bg-white">
       <address-card status="SUCCESS"
-                    title="{{cart.orderMethod === 'DELIVERY' ? 'From store' : 'Pick up location'}}"
+                    title="{{cart.orderMethod === 'DELIVERY' ? 'Từ cửa hàng' : 'Lựa chọn địa chỉ'}}"
                     address="{{store.address}}" />
       <view class="line border border-solid border-gray20 my-2x-small" />
       <address-card tiki:if="{{cart.orderMethod === 'DELIVERY'}}"
-                    title="To"
+                    title="Đến"
                     status="SUCCESS"
                     iconRight="next"
                     iconLeft="location"
@@ -47,12 +47,12 @@
                     status="SUCCESS"
                     iconRight="next"
                     iconLeft="clock"
-                    title="Pickup time"
+                    title="Thời gian nhận"
                     onSelect="onShowTimeSelect"
                     address="{{`${cart.time.hour}:${cart.time.min}, ${cart.date}`}}" />
     </view>
     <view class="text-medium font-bold mt-medium mb-2x-small">
-      Order details
+      Thông tin đơn hàng
     </view>
     <view class="p-medium radius-8px bg-white mb-medium">
       <product-card tiki:for="{{cart.products}}"
@@ -64,7 +64,7 @@
                     onChangeItemNumberInput="onChangeItemNumberInput" />
       <view class="flex justify-between">
         <view class="">
-          Price
+          Giá
         </view>
         <view class="font-bold">
           {{priceFormat(cart.total)}}
@@ -74,7 +74,7 @@
             class="flex justify-between mt-medium">
         <view class="flex items-center">
           <view class="mr-4x-small">
-            Shipping fee
+            Phí vận chuyển
           </view>
           <icon type="warning"
                 size="14"
@@ -84,18 +84,9 @@
           {{priceFormat(cart.shippingFee)}}
         </view>
       </view>
-      <view tiki:if="{{cart.coupon.value}}"
-            class="flex justify-between mt-medium">
-        <view class="mr-4x-small">
-          Promotion
-        </view>
-        <view class="font-bold text-green">
-          - {{priceFormat(cart.coupon.value)}}
-        </view>
-      </view>
       <view class="flex justify-between mt-medium">
         <view class="">
-          Total
+          Tổng cộng
         </view>
         <view class="font-bold">
           {{priceFormat(cart.total + cart.shippingFee - cart.coupon.value)}}
@@ -117,24 +108,24 @@
                base="{{hour: cart.time.hour, min: cart.time.min}}" />
   <c-modal isShow="{{currentModal === 'remove_confirm'}}"
            headerContent="Confirmation"
-           description="Do you want to remove this product from your cart?"
-           leftButton="Yes"
+           description="Bạn có muốn xóa sản phẩm này khỏi giỏ hàng của mình không?"
+           leftButton="Có"
            onLeftButtonClick="onConfirmDelete"
-           rightButton="No"
+           rightButton="Không"
            onRightButtonClick="onCancelDelete" />
   <c-modal isShow="{{currentModal === 'paymet_result'}}"
            headerContent="Payment result"
-           description="Select payment result."
+           description="Chọn phương thức thanh toán."
            leftButton="Fail"
            onLeftButtonClick="onCloseModal"
            rightButton="Success"
            onRightButtonClick="onPaymentSuccessSelect" />
   <c-modal isShow="{{currentModal === 'route_select'}}"
            headerContent="Payment successful"
-           description="Please check your order in order management page"
-           leftButton="Shopping"
+           description="Vui lòng kiểm tra đơn hàng của bạn trong trang quản lý đơn hàng"
+           leftButton="Mua sắm"
            onLeftButtonClick="onShoppingRouteSelect"
-           rightButton="Tracking"
+           rightButton="Theo dõi"
            onRightButtonClick="onOrderListRouteSelect" />
 </template>
 

@@ -11,7 +11,7 @@
     <view class="content-wraper flex items-center justify-between">
       <view class="w-full content">
         <view class="font-regular text-gray100">
-          Deliver to
+          Giao đến
         </view>
         <view class="font-bold py-4x-small text-gray100 truncate">
           {{buyer.addressText}}
@@ -26,21 +26,6 @@
           src="/assets/next.png"
         />
       </view>
-    </view>
-  </view>
-  <view class="px-medium py-2x-small bg-white store-select text-gray100">
-    <view
-      class="current-store flex items-center radius-4px border border-box border-solid border-gray20 pl-medium"
-      onTap="onStoreSelect"
-    >
-      <view>Store</view>
-      <view class="line border-solid border-gray20 mx-2x-small"></view>
-      <view class="content truncate">{{store.name}}, {{store.address}}
-      </view>
-      <image
-        class="icon"
-        src="/assets/down.png"
-      />
     </view>
   </view>
 </view>

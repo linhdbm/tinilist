@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "componentLifeCycleV2": "YES",
-  "usingComponents": {
-    "up-down-number": "components/up-down-number"
-  }
-}

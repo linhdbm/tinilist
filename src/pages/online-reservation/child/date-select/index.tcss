@@ -1,7 +1,0 @@
-.footer {
-  border-top-width: 1px;
-  border-top-style: solid;
-}
-.date-select {
-  z-index: 100;
-}

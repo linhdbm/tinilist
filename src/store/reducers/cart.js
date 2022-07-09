@@ -32,10 +32,6 @@ export default function cart(state = initialState, action) {
         action._id,
         action.value,
       );
-    case c.APPLY_COUPON:
-      return handleApplyCoupon(state, action);
-    case c.RESET_COUPON:
-      return handleApplyCoupon(state, action);
     case c.CHANGE_TIME_PICKUP:
       return handleChangePickupTime(state, action);
     case c.RESET_CART:

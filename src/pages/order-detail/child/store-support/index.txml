@@ -17,14 +17,14 @@
       {{store.name}}
     </view>
     <view class="font-regular text-center my-medium">
-      Store contact informations
+      Lưu trữ thông tin liên hệ
     </view>
   </view>
   <view style="text-align: left;">
     <address-card
       status="SUCCESS"
       iconLeft="phone"
-      title="Phone number"
+      title="Số điện thoại"
       onSelect="onPhoneCall"
       address="{{store.phone}}"
     />
@@ -32,7 +32,7 @@
     <address-card
       status="SUCCESS"
       iconLeft="location_blue"
-      title="Address"
+      title="Địa chỉ"
       address="{{store.address}}"
     />
   </view>
@@ -45,7 +45,7 @@
         onTap="onClose"
         type="outline"
       >
-        Close
+        Đóng
       </button>
     </view>
   </view>

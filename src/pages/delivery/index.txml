@@ -65,8 +65,6 @@
     <buyer-address-card tiki:if="{{orderMethod === 'DELIVERY'}}"
                         buyer="{{buyer.defaultAddress}}"
                         store="{{store}}" />
-    <store-address-card tiki:if="{{orderMethod === 'STORE_PICKUP'}}"
-                        address="{{store.address}}" />
     <view class="flex main-view">
       <scroll-view class="categories scroll-{{orderMethod.toLowerCase()}} {{cart.total ? 'with-cart' : ''}}"
                    scroll-y="{{true}}">

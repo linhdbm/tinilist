@@ -22,7 +22,7 @@ $page({
     const { finishedOnly } = queryToObj(query);
 
     my.setNavigationBar({
-      title: !finishedOnly ? 'Order management' : 'Order history',
+      title: !finishedOnly ? 'Quản lý đơn hàng' : 'Lịch sử đơn hàng',
     });
     my.addIconsToNavigationBar({
       icons: [
