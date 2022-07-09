@@ -1,4 +1,5 @@
 <variant-01  headerType="{{headerType}}"/>
+
 <view
   tiki:if="{{orders[currentTab].length}}"
   class="orders-list px-medium pt-medium pb-4x-small" >
@@ -16,4 +17,5 @@
   top="{{45}}"
   showButton="{{true}}"
 />
+
 <sticky-bottom />

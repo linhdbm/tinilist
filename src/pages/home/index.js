@@ -1,4 +1,4 @@
-import { getData } from '../../services';
+import { navigateTo } from '../../helper';
 
 Page({
   data: {
@@ -35,4 +35,7 @@ Page({
         headerType: 'SCROLLED',
       });
   },
+  onMoveToProductList() {
+    navigateTo('delivery', { method: "DELIVERY" });
+  }
 });

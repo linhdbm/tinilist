@@ -7,7 +7,7 @@ export function initData(arr, finishedOnly = false) {
   });
   let rs = {
     [c.DELIVERY]: [],
-    [c.STORE_PICKUP]: [],
+    [c.STORE_PICKUP]: []
   };
   arr.forEach((v) => {
     rs[v.orderMethod].push(v);

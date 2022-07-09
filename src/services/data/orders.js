@@ -16,8 +16,8 @@ export const orders = [
       date: '21/02/2022',
     },
     time: '13:40',
-    orderMethod: c.STORE_PICKUP,
-    status: c.RECEIVED,
+    orderMethod: c.DELIVERY,
+    status: c.PREPARING,
     products: [
       {
         name: 'Capuccino',
@@ -61,7 +61,7 @@ export const orders = [
       },
       date: '23/02/2022',
     },
-    orderMethod: c.STORE_PICKUP,
+    orderMethod: c.DELIVERY,
     status: c.READY,
     products: [
       {

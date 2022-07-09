@@ -53,5 +53,5 @@ $page({
   },
   onMoveToProductList() {
     navigateTo('delivery', { method: this.data.currentTab });
-  },
+  }
 });
