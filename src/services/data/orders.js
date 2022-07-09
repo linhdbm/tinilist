@@ -5,8 +5,7 @@ export const orders = [
     _id: '247-96028',
     price: 148000,
     shippingFee: 20000,
-    promotion: 50000,
-    total: 118000,
+    total: 168000,
     date: '21/02/2022',
     pickupInfo: {
       time: {
@@ -36,11 +35,6 @@ export const orders = [
         selectedAttributes: [],
       },
     ],
-    store: {
-      name: 'SB Han Thuyen',
-      address: '13 Han Thuyen, D.1, HCM city',
-      phone: '0908087290',
-    },
     paymentMethod: {
       name: 'Momo',
       image: '/assets/payment.png',
@@ -50,7 +44,6 @@ export const orders = [
     _id: '247-96029',
     price: 69000,
     shippingFee: 15000,
-    promotion: 0,
     total: 84000,
     date: '22/02/2022',
     time: '12:04',
@@ -78,11 +71,6 @@ export const orders = [
         ],
       },
     ],
-    store: {
-      name: 'SB Han Thuyen',
-      address: '13 Han Thuyen, D.1, HCM city',
-      phone: '0908087290',
-    },
     paymentMethod: {
       name: 'Momo',
       image: '/assets/payment.png',
@@ -92,8 +80,7 @@ export const orders = [
     _id: '247-96099',
     price: 79000,
     shippingFee: 15000,
-    promotion: 50000,
-    total: 44000,
+    total: 94000,
     date: '22/02/2022',
     time: '12:04',
     pickupInfo: {
@@ -120,11 +107,6 @@ export const orders = [
         ],
       },
     ],
-    store: {
-      name: 'SB Han Thuyen',
-      address: '13 Han Thuyen, D.1, HCM city',
-      phone: '0908087290',
-    },
     paymentMethod: {
       name: 'Momo',
       image: '/assets/payment.png',

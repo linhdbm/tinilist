@@ -1,19 +1,6 @@
-<variant-01  headerType="{{headerType}}"/>
-<view
-  tiki:if="{{orders[currentTab].length}}"
-  class="orders-list px-medium pt-medium pb-4x-small" >
-    <order-card
-      tiki:for="{{orders[currentTab]}}"
-      status="{{status}}"
-      order="{{item}}"
-    />
-    <variant-01 status="{{status}}"/>
-</view>
-<no-item
-  tiki:if="{{!orders[currentTab].length}}"
-  onSelect="onMoveToProductList"
-  type="order"
-  top="{{45}}"
-  showButton="{{true}}"
-/>
+<<<<<<< Updated upstream
+<variant-01  headerType="{{headerType}}" status="{{status}}"/>
+
+=======
+>>>>>>> Stashed changes
 <sticky-bottom />

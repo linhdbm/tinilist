@@ -24,11 +24,6 @@
             class="skeleton" />
       <view class="skeleton skeleton-font-small w-50" />
     </view>
-    <view class="flex items-center mt-medium">
-      <view style="height: 24px; width: 24px"
-            class="skeleton" />
-      <view class="ml-2x-small skeleton skeleton-font-medium w-full" />
-    </view>
     <view class="line border-gray20 border-solid my-2x-small" />
     <view class="flex items-center">
       <view style="height: 24px; width: 24px"
@@ -55,13 +50,6 @@
       </view>
       <view class="text-small font-regular text-gray60">
         {{order.date}}, {{order.time}}
-      </view>
-    </view>
-    <view class="flex items-center mt-medium">
-      <image style="height: 24px; width: 24px"
-             src="/assets/store_icon.png" />
-      <view class="ml-2x-small text-gray100">
-        {{order.store.address}}
       </view>
     </view>
     <view class="line border-gray20 border-solid my-2x-small" />
