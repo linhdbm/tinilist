@@ -16,13 +16,13 @@ $page({
     status: c.LOADING,
     isShowModal: false,
     statusTitle: {
-      [c.DELIVERING]: 'Delivering',
-      [c.PREPARING]: 'Preparing',
-      [c.DELIVERED]: 'Delivered',
-      [c.FAIL]: 'Delivery failed',
-      [c.COMPLETED]: 'Order completed',
-      [c.RECEIVED]: 'Order received',
-      [c.READY]: 'Ready for pickup',
+      [c.DELIVERING]: 'Đang giao hàng',
+      [c.PREPARING]: 'Đang chuẩn bị',
+      [c.DELIVERED]: 'Đã giao',
+      [c.FAIL]: 'Giao hàng thất bại',
+      [c.COMPLETED]: 'Đặt thành công',
+      [c.RECEIVED]: 'Đã nhận đơn đặt',
+      [c.READY]: 'Sẵn sàng nhận hàng',
     },
     bgList: {
       [c.DELIVERY]: {

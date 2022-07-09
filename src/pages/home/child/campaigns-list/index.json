@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "componentLifeCycleV2": "YES",
-  "usingComponents": {
-    "campaign-card": "pages/home/child/campaign-card"
-  }
-}

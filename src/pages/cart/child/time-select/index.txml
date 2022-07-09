@@ -1,6 +1,6 @@
 <view class="time-select">
   <block tiki:if="{{isShow}}">
-    <bottom-sheet title="Pickup time"
+    <bottom-sheet title="Chọn thời gian nhận"
                   onClose="onClose">
       <picker-view value="{{value}}"
                    onChange="onTimeChange">
@@ -17,7 +17,7 @@
                 onTap="onTimeSelect"
                 class="w-full"
                 size="medium">
-          Apply
+          Chấp nhận
         </button>
       </view>
     </bottom-sheet>

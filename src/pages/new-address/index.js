@@ -44,7 +44,7 @@ $page({
   },
   onLoad(query) {
     my.setNavigationBar({
-      title: 'New address',
+      title: 'Thêm địa chỉ',
     });
   },
   onAddressChange(e) {
@@ -86,9 +86,9 @@ $page({
         data: createDataForAddressBook(this.data.addressInfo),
         success: (success) => {},
         fail: ({ errorMessage: err }) => {
-          const content = 'Message: ' + err;
+          const content = 'Thông báo: ' + err;
           my.alert({
-            title: 'Fail to save to address book.',
+            title: 'Không thể lưu vào sổ địa chỉ.',
             content,
             buttonText: 'OK',
           });

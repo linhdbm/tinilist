@@ -1,5 +1,4 @@
 import { constants as c } from '../../constants';
-import { getDataInstant } from '../../services';
 
 export const addCart = (data) => (dispatch) => {
   dispatch({
@@ -14,35 +13,6 @@ export const changeItemNumber = (orderMethod, _id, value) => (dispatch) => {
     orderMethod,
     _id,
     value,
-  });
-};
-
-export const applyCoupon = (orderMethod, code) => (dispatch) => {
-  const coupons = getDataInstant('coupons');
-  let value = 0;
-  let status = c.FAILURE;
-  const selectedCoupon = coupons.filter(
-    (v) => v.code.toLowerCase() === code.trim().toLowerCase(),
-  )[0];
-  if (selectedCoupon) {
-    value = selectedCoupon.value;
-    status = c.SUCCESS;
-  }
-  dispatch({
-    type: c.APPLY_COUPON,
-    orderMethod,
-    status,
-    value,
-    code,
-  });
-};
-
-export const resetCoupon = (orderMethod) => (dispatch) => {
-  dispatch({
-    type: c.RESET_COUPON,
-    orderMethod,
-    status: c.NONE,
-    value: 0,
   });
 };
 

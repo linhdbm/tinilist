@@ -29,12 +29,12 @@ export function getAvailableDate() {
   let rs = [];
   let curDate = new Date();
   rs.push({
-    content: 'Today',
+    content: 'Hôm nay',
     value: curDate.getTime(),
   });
   curDate.setDate(curDate.getDate() + 1);
   rs.push({
-    content: 'Tomorrow',
+    content: 'Ngày mai',
     value: curDate.getTime(),
   });
   curDate.setDate(curDate.getDate() + 1);

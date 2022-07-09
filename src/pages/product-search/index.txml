@@ -28,7 +28,7 @@
     <view tiki:if="{{result.length}}">
       <view class="font-bold text-medium pb-small"
             tiki:if="{{!searchValue}}">
-        Popular drinks and food
+        Những món hàng được ưa chuộng
       </view>
       <product-card tiki:for="{{result}}"
                     product="{{item}}"

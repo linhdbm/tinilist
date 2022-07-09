@@ -34,7 +34,7 @@
                 onBlur="onTextBlur"
                 onFocus="onTextFocus"
                 onInput="onNoteInput"
-                placeholder="Your note to barista" />
+                placeholder="Ghi chú" />
     </view>
   </view>
   <sticky-bottom>

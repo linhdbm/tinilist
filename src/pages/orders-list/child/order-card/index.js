@@ -9,39 +9,39 @@ Component({
     badges: {
       [c.DELIVERY]: {
         [c.PREPARING]: {
-          content: 'Preparing',
+          content: 'Đang chuẩn bị',
           color: 'orange60',
           bg: 'orange10',
         },
         [c.DELIVERING]: {
-          content: 'Delivering',
+          content: 'Đang giao hàng',
           color: 'brand',
           bg: 'blue10',
         },
         [c.DELIVERED]: {
-          content: 'Delivered',
+          content: 'Đã giao',
           color: 'green60',
           bg: 'green10',
         },
         [c.FAIL]: {
-          content: 'Delivery failed',
+          content: 'Giao hàng thất bại',
           color: 'red60',
           bg: 'red10',
         },
       },
       [c.STORE_PICKUP]: {
         [c.RECEIVED]: {
-          content: 'Order received',
+          content: 'Đã nhận đơn đặt',
           color: 'orange60',
           bg: 'orange10',
         },
         [c.COMPLETED]: {
-          content: 'Order completed',
+          content: 'Đặt thành công',
           color: 'green60',
           bg: 'green10',
         },
         [c.READY]: {
-          content: 'Ready for pickup',
+          content: 'Sẵn sàng nhận hàng',
           color: 'brand',
           bg: 'blue10',
         },

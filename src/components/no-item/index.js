@@ -11,15 +11,15 @@ Component({
       search: '/assets/no_result.png',
     },
     title: {
-      order: 'You have no order',
-      search: 'Sorry, we nearly found it!',
+      order: 'Bạn không có đơn đặt hàng',
+      search: 'Xin lỗi, chúng tôi gần như tìm thấy nó!',
     },
     subTitle: {
-      order: 'How about trying our new drinks?',
-      search: 'Please try again, better luck next time',
+      order: 'Hay là bạn muốn đặt thử một đơn hàng?',
+      search: 'Vui lòng thử lại, chúc bạn may mắn',
     },
     btnContent: {
-      order: 'Order now!',
+      order: 'Đặt ngay!',
     },
   },
   methods: {

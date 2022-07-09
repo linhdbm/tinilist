@@ -54,7 +54,7 @@
           <button size="small"
                   shape="pill"
                   onTap="onShowModal">
-            Contact support
+            Liên hệ hỗ trợ
           </button>
         </view>
         <view tiki:if="{{order.status === 'READY' || order.status === 'COMPLETED'}}"
@@ -63,55 +63,55 @@
                   size="20"
                   color="gray60" />
           <view class="ml-x-small">
-            Order will be automatically completed <text class="font-bold">
-              {{' '}}X hours {{' '}}</text> after your pick up
-            time. The store won’t be responsible for your order after that time.
+            Đơn hàng sẽ tự động hoàn thành <text class="font-bold">
+              {{' '}}X giờ {{' '}}</text> sau khi bạn nhận được đơn
+            hàng. Cửa hàng sẽ không chịu trách nhiệm cho đơn đặt hàng của bạn sau thời gian đó.
           </view>
         </view>
       </view>
       <view class="mt-medium mb-2x-small font-bold">
-        General info
+        Thông tin chung
       </view>
       <view class="px-medium py-large bg-white radius-8px">
         <view class="w-full flex justify-between">
           <view>
-            <view>Order ID</view>
+            <view>Mã đơn đặt</view>
             <view class="text-small text-gray60"
                   tiki:if="{{order.orderMethod === 'STORE_PICKUP'}}">
-              For picking up at store
+              Nhận tại cửa hàng
             </view>
           </view>
           <view class="font-bold">{{order._id}}</view>
         </view>
         <view class="line border-gray20 border-solid my-2x-small" />
         <view class="w-full flex justify-between">
-          <view>Order date</view>
+          <view>Ngày đặt đơn</view>
           <view class="font-bold">{{order.date}}, {{order.time}}</view>
         </view>
       </view>
       <view class="mt-medium mb-2x-small font-bold">
-        Shipping detail
+        Thông tin vận chuyển
       </view>
       <view class="px-medium py-large bg-white radius-8px">
-        <address-card title="{{order.orderMethod === 'DELIVERY' ? 'From store' : 'Pick up location'}}"
+        <address-card title="{{order.orderMethod === 'DELIVERY' ? 'Từ cửa hàng' : 'Chọn địa điểm'}}"
                       address="{{order.store.address}}"
                       iconLeft="{{ order.orderMethod === 'DELIVERY' ?'store' : 'location_blue'}}"
                       status="SUCCESS" />
         <view class="line border-gray20 border-solid my-2x-small" />
         <address-card tiki:if="{{order.orderMethod === 'DELIVERY'}}"
-                      title="To"
+                      title="Đến"
                       address="{{order.buyer.address}}"
                       subTitle="{{order.buyer.name}} • {{order.buyer.phone}}"
                       status="{{status}}"
                       iconLeft="location" />
         <address-card tiki:if="{{order.orderMethod === 'STORE_PICKUP'}}"
-                      title="Pick up time"
+                      title="Chọn thời gian"
                       address="{{order.pickupInfo.time.hour}}:{{order.pickupInfo.time.min}}, {{order.pickupInfo.date}}"
                       status="{{status}}"
                       iconLeft="clock" />
       </view>
       <view class="mt-medium mb-2x-small font-bold">
-        Product info
+        Thông tin sản phẩm
       </view>
       <view class="bg-white p-medium radius-8px">
         <product-card showLine="{{index < order.products.length -1}}"
@@ -120,7 +120,7 @@
                       status="SUCCESS" />
       </view>
       <view class="mt-medium mb-2x-small font-bold">
-        Payment info
+        Thông tin thanh toán
       </view>
       <view class="flex items-center payment bg-white p-medium radius-8px">
         <view class="mr-2x-small">
@@ -130,7 +130,7 @@
         </view>
         <view>
           <view>
-            Payment method
+            Phương thức thanh toán
           </view>
           <view class="font-bold">
             {{order.paymentMethod.name}}
@@ -140,7 +140,7 @@
       <view class="bg-white radius-8px p-medium mt-2x-small">
         <view class="flex justify-between">
           <view>
-            Price
+            Giá
           </view>
           <view class="font-bold">
             {{priceFormat(order.price)}}
@@ -148,7 +148,7 @@
         </view>
         <view class="flex justify-between mt-medium">
           <view class="flex items-center">
-            <view class="mr-4x-small">Shipping fee</view>
+            <view class="mr-4x-small">Phí vận chuyển</view>
             <c-icon type="warning"
                     size="{{14}}"
                     color="gray60" />
@@ -157,18 +157,9 @@
             {{priceFormat(order.shippingFee)}}
           </view>
         </view>
-        <view tiki:if="{{order.promotion}}"
-              class="flex justify-between mt-medium">
-          <view>
-            Promotion
-          </view>
-          <view class="font-bold text-green">
-            - {{priceFormat(order.promotion)}}
-          </view>
-        </view>
         <view class="flex justify-between mt-medium">
           <view>
-            Total
+            Tổng cộng
           </view>
           <view class="font-bold">
             {{priceFormat(order.total)}}
