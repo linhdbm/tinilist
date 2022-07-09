@@ -2,14 +2,12 @@ import { delay, clone } from '../helper';
 
 import { buyer } from './data/buyer';
 import { orders } from './data/orders';
-import { stores } from './data/stores';
 import { products } from './data/products';
 import { categories } from './data/categories';
 
 const data = {
   buyer,
   orders,
-  stores,
   products,
   categories
 };

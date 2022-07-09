@@ -1,12 +1,9 @@
 import { $page } from "@tiki.vn/redux-miniprogram-bindings";
 
 import { navigateTo, redirectTo, debounce, delay } from "../../helper";
-import { getAllStore } from "../../store/actions/store";
 import { getBuyerInfo } from "../../store/actions/buyer";
 import {
   resetCart,
-  resetCoupon,
-  applyCoupon,
   changeItemNumber,
   changePickupTime,
 } from "../../store/actions/cart";
@@ -16,15 +13,11 @@ $page({
     (state) => ({
       cart: state.cart,
       buyer: state.buyer,
-      store: state.store.defaultStore,
     }),
   ],
   mapDispatch: {
     resetCart,
     getBuyerInfo,
-    getAllStore,
-    applyCoupon,
-    resetCoupon,
     changeItemNumber,
     changePickupTime,
   },
@@ -34,13 +27,11 @@ $page({
     status: "LOADING",
     currentModal: "", // remove_confirm, paymet_result, route_select
     isShowTimeSelect: false,
-    isShowCouponInput: false,
   },
   async onLoad(query) {
     my.setNavigationBar({ title: "Cart" });
 
     await this.getBuyerInfo();
-    await this.getAllStore();
 
     this.onChangeItemNumberInput = debounce(this.onChangeItemNumberInput, 100);
     this.setData({
@@ -49,9 +40,6 @@ $page({
   },
   onBuyerAddressSelect() {
     navigateTo("address");
-  },
-  onStoreAddressSelect() {
-    navigateTo("store-select");
   },
   onShowPaymentResultSelect() {
     this.setData({
@@ -74,20 +62,6 @@ $page({
   onOrderListRouteSelect() {
     this.resetCart(this.data.orderMethod);
     redirectTo("orders-list");
-  },
-  onShowCouponInput() {
-    this.setData({
-      isShowCouponInput: true,
-    });
-  },
-  onHideCouponInput() {
-    this.setData({ isShowCouponInput: false });
-  },
-  onApplyCoupon(code) {
-    this.applyCoupon(this.data.orderMethod, code);
-  },
-  onResetCoupon() {
-    this.resetCoupon(this.data.orderMethod);
   },
   onChangeItemNumber(id, value, current) {
     if (value + current === 0) {

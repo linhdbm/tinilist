@@ -32,8 +32,7 @@
     </view>
     <view class="p-medium radius-8px bg-white">
       <address-card status="SUCCESS"
-                    title="{{cart.orderMethod === 'DELIVERY' ? 'Từ cửa hàng' : 'Lựa chọn địa chỉ'}}"
-                    address="{{store.address}}" />
+                    title="{{cart.orderMethod === 'DELIVERY' ? 'Từ cửa hàng' : 'Lựa chọn địa chỉ'}}" />
       <view class="line border border-solid border-gray20 my-2x-small" />
       <address-card tiki:if="{{cart.orderMethod === 'DELIVERY'}}"
                     title="Đến"
@@ -130,4 +129,4 @@
 </template>
 
 <template is="{{status}}"
-          data="{{store, buyer: buyer.defaultAddress, cart, isShowCouponInput, isShowTimeSelect, showModal, currentModal}}" />
+          data="{{ buyer: buyer.defaultAddress, cart, isShowCouponInput, isShowTimeSelect, showModal, currentModal}}" />

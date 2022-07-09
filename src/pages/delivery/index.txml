@@ -63,8 +63,7 @@
 <template name="SUCCESS">
   <view class="delivery-page">
     <buyer-address-card tiki:if="{{orderMethod === 'DELIVERY'}}"
-                        buyer="{{buyer.defaultAddress}}"
-                        store="{{store}}" />
+                        buyer="{{buyer.defaultAddress}}" />
     <view class="flex main-view">
       <scroll-view class="categories scroll-{{orderMethod.toLowerCase()}} {{cart.total ? 'with-cart' : ''}}"
                    scroll-y="{{true}}">
@@ -97,4 +96,4 @@
 </template>
 
 <template is="{{status}}"
-          data="{{status, cart, categories, currentPos, orderMethod, currentTag, buyer, store, holderStatus}}" />
+          data="{{status, cart, categories, currentPos, orderMethod, currentTag, buyer, holderStatus}}" />

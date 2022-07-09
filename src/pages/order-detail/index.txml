@@ -51,11 +51,6 @@
           <view class="status font-bold">
             {{statusTitle[order.status]}}
           </view>
-          <button size="small"
-                  shape="pill"
-                  onTap="onShowModal">
-            Liên hệ hỗ trợ
-          </button>
         </view>
         <view tiki:if="{{order.status === 'READY' || order.status === 'COMPLETED'}}"
               class="order-note border border-solid border-gray20 radius-8px p-2x-small flex mt-medium">
@@ -93,11 +88,6 @@
         Thông tin vận chuyển
       </view>
       <view class="px-medium py-large bg-white radius-8px">
-        <address-card title="{{order.orderMethod === 'DELIVERY' ? 'Từ cửa hàng' : 'Chọn địa điểm'}}"
-                      address="{{order.store.address}}"
-                      iconLeft="{{ order.orderMethod === 'DELIVERY' ?'store' : 'location_blue'}}"
-                      status="SUCCESS" />
-        <view class="line border-gray20 border-solid my-2x-small" />
         <address-card tiki:if="{{order.orderMethod === 'DELIVERY'}}"
                       title="Đến"
                       address="{{order.buyer.address}}"
@@ -168,9 +158,6 @@
       </view>
     </view>
   </view>
-  <store-support store="{{order.store}}"
-                 isShow="{{isShowModal}}"
-                 onClose="onHideModal" />
 </template>
 
 <template is="{{status}}"

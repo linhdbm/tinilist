@@ -6,8 +6,5 @@ Component({
     onTap() {
       navigateTo('address');
     },
-    onStoreSelect() {
-      navigateTo('store-search', { next: 'delivery' });
-    },
   },
 });

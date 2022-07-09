@@ -10,7 +10,6 @@ $page({
   mapState: [
     (state) => ({
       list: state.product.list,
-      store: state.store.defaultStore,
     }),
   ],
   mapDispatch: { getAllProducts },

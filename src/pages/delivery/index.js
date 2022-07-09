@@ -4,7 +4,6 @@ import { $page } from "@tiki.vn/redux-miniprogram-bindings";
 import { getData } from "../../services";
 import { constants as c } from "../../constants";
 import { navigateTo, queryToObj, redirectTo } from "../../helper";
-import { getAllStore } from "../../store/actions/store";
 import { getBuyerInfo } from "../../store/actions/buyer";
 import { getAllCategories } from "../../store/actions/category";
 
@@ -15,11 +14,10 @@ $page({
     (state) => ({
       categories: state.category.list,
       buyer: state.buyer,
-      store: state.store.defaultStore,
       cart: state.cart,
     }),
   ],
-  mapDispatch: { getAllCategories, getBuyerInfo, getAllStore },
+  mapDispatch: { getAllCategories, getBuyerInfo },
 })({
   data: {
     topHeight: 0,
@@ -31,17 +29,14 @@ $page({
     holderStatus: "none",
   },
   async onLoad(query) {
-    let title;
+    let title = "Giao hàng";
     const orderMethod = queryToObj(query).method;
 
-    if (orderMethod === c.DELIVERY) title = "Delivery";
+    if (orderMethod === c.DELIVERY) title = "Giao hàng";
     my.setNavigationBar({ title });
 
     if (orderMethod === c.DELIVERY && this.data.buyer.status === c.LOADING) {
       await this.getBuyerInfo();
-    }
-    if (!this.data.store) {
-      await this.getAllStore();
     }
     const categories = await getData("categories");
     this.setData({
