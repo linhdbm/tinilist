@@ -17,6 +17,7 @@
   "dependencies": {
     "@tiki.vn/redux-miniprogram-bindings": "^1.4.4",
     "@tiki.vn/tini-ui": "^0.11.0",
+    "axios": "^0.27.2",
     "query-string": "^7.1.1",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1"
